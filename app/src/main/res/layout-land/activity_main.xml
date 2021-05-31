@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:src="@drawable/kitchen"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/categories"
+            android:text="Categories"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="openCategoriesClick"/>
+
+        <Button
+            android:id="@+id/myrecipes"
+            android:text="My Recipes"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="openRecipesClick"/>
+
+        <Button
+            android:id="@+id/favourites"
+            android:text="Favourite Recipes"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="openFavouritesClick"/>
+
+        <Button
+            android:id="@+id/thingstobuy"
+            android:text="List of things to buy"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="createNewGroceryListClick"/>
+
+    </LinearLayout>
+
+</LinearLayout>

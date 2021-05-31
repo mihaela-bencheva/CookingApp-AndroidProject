@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CookingRecipes</string>
+
+    <string name="mock_recipe_title">Chicken Soup</string>
+    <string name="mock_recipe_products">
+        Chicken meat - 500 g. \n
+        Yoghurt - 2pack; \n
+        Eggs - 2; \n
+    </string>
+    <string name="mock_recipe_description">
+        Boil the chicken for 2 hours. Then boil water and mix all ingredients.
+    </string>
+</resources>
