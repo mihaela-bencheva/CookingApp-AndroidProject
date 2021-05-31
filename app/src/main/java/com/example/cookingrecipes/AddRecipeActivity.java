@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,12 @@ public class AddRecipeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
+
+        Bundle extras = getIntent().getExtras();
+        if(extras != null) {
+            String category_name = extras.getString("hint_category");
+            ((EditText) findViewById(R.id.category_recipe)).setText(category_name);
+        }
     }
 
     public void addNewRecipe(View view) {

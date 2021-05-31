@@ -14,67 +14,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:text="Category:"
-        android:textSize="20sp"
-        android:layout_gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
-    <EditText
-        android:id="@+id/category_recipe"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="Title:"
-        android:textSize="20sp"
-        android:layout_gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
-    <EditText
-        android:id="@+id/newrecipe"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ex: Chicken Soup"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:text="Products:"
-        android:textSize="20sp"
-        android:layout_gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
-    <EditText
-        android:id="@+id/newrecipe_products"
-        android:gravity="top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="Ex: Chicken meat - 500 g." />
+            <TextView
+                android:text="Category:"
+                android:textSize="20sp"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/category_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:text="Description:"
-        android:textSize="20sp"
-        android:layout_gravity="left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
-    <EditText
-        android:layout_weight="1"
-        android:gravity="top"
-        android:id="@+id/newrecipe_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ex: Boil the soup for 30 minutes..."/>
+            <TextView
+                android:text="Title:"
+                android:textSize="20sp"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/newrecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex: Chicken Soup"/>
 
-    <Button
-        android:text="Submit"
-        android:id="@+id/submit_recipe"
-        android:onClick="addNewRecipe"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:text="Products:"
+                android:textSize="20sp"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+            <EditText
+                android:id="@+id/newrecipe_products"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ex: Chicken meat - 500 g." />
+
+            <TextView
+                android:text="Description:"
+                android:textSize="20sp"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:layout_weight="1"
+                android:gravity="top"
+                android:id="@+id/newrecipe_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex: Boil the soup for 30 minutes..."/>
+
+            <Button
+                android:text="Submit"
+                android:id="@+id/submit_recipe"
+                android:onClick="addNewRecipe"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

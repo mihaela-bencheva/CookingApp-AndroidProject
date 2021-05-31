@@ -3,6 +3,7 @@ package com.example.cookingrecipes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import java.util.List;
 public class RecipesActivity extends AppCompatActivity {
     List<String> recipesNames;
     private static String DB_NAME = "cookingRecipes";
+    String category_name;
 
     ListView recipes;
 
@@ -30,10 +32,10 @@ public class RecipesActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
         if (extras != null) {
-            String category = extras.getString("selected_category");
-            recipesNames = GetRecipesByCategory(category);
+            category_name = extras.getString("selected_category");
+            recipesNames = GetRecipesByCategory(category_name);
 
-            ((TextView) findViewById(R.id.recipes_title)).setText(category);
+            ((TextView) findViewById(R.id.recipes_title)).setText(category_name);
         } else {
             recipesNames = GetAllRecipesNames();
         }
@@ -60,6 +62,10 @@ public class RecipesActivity extends AppCompatActivity {
 
     public void addNewRecipe(View view) {
         Intent intent = new Intent(this, AddRecipeActivity.class);
+        if (category_name != null) {
+            intent.putExtra("hint_category", category_name);
+        }
+
         startActivity(intent);
     }
 

@@ -3,7 +3,9 @@ package com.example.cookingrecipes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -115,5 +117,12 @@ public class RecipeActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.wtf("DB Error: ", e.getMessage());
         }
+    }
+
+    public void addProductsToGroceryList(View view) {
+        SharedPreferences sharedPref = RecipeActivity.this.getSharedPreferences("grocery", Context.MODE_PRIVATE);
+        SharedPreferences.Editor prefEditor = sharedPref.edit();
+        prefEditor.putString("groceryText", recipe.products);
+        prefEditor.commit();
     }
 }

@@ -1,5 +1,4 @@
-soup
-salad
-dessert
-chicken delicacies
-Noodles
+Soup
+Salad
+Dessert
+Alaminutes
